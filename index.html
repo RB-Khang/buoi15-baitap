@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buoi 15</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="bai__tap">
+        <h1>Trả kết quả điểm thi</h1>
+        <p>Nhập điểm của hội đồng </p>
+        <input type="number" placeholder="Điểm chuẩn" id="diem__chuan">
+        <p>Nhập điểm 3 môn thi </p>
+        <input type="number" placeholder="Môn thứ 1" id="diem__1"><br>
+        <input type="number" placeholder="Môn thứ 2" id="diem__2"><br>
+        <input type="number" placeholder="Môn thứ 3" id="diem__3"><br>
+        <p>Nhập khu vực (A, B, C hoặc X nếu không thuộc khu vực ưu tiên)</p>
+        <select name="Khu Vực" id="kv">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="X">X</option>
+        </select>
+        <p>Đối tượng (1, 2, 3 hoặc 0 nếu không thuộc khu vực ưu tiên)</p>
+        <select name="Khu Vực" id="dt">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="0">0</option>
+        </select>
+        <br>
+        <button id="btn__test">Kiểm tra</button>
+        <br>
+
+        <span id="ket__qua"></span> <br>
+        <img src="./css/Faker_2020_interview.jpg" alt="" id="faker">
+    </div>
+
+
+
+    <div class="bai__tap">
+        <h1>Tính tiền điện</h1>
+        <p>Nhập thông tin tiêu thụ điện</p>
+        <input type="text" placeholder="Tên" id="name"> <br>
+        <input type="number" placeholder="Số tiêu thụ" id="kW"> <br>
+        <button id="btn__tien__dien">Tính tiền điện</button>
+        <br>
+        <span id="tien__dien"></span>
+    </div>
+
+
+    <div class="bai__tap">
+        <h1>Tính thuế thu nhập cá nhân</h1>
+        <p>Nhập thông tin cá nhân</p>
+        <input type="text" placeholder="Tên"><br>
+        <input type="number" placeholder="Tổng thu nhập trong năm" id="thu__nhap"><span>(đơn vị: triệu)</span><br>
+        <input type="number" placeholder="Số người phụ thuộc" id="nguoi__pt"><br>
+        <button id="btn__thue">Tính thuế thu nhập cá nhân</button><br>
+        <span id="thue"></span>
+    </div>
+
+
+
+    <div class="bai__tap">
+        <h1>Tính tiền cáp</h1>
+        <p>Nhập thông tin khách hàng</p>
+        <input type="text" placeholder="Mã khách hàng">
+        <select name="TypeKH" id="type__kh" onchange="hienThi()">
+            <option value="ND">Nhà dân</option>
+            <option value="DN" >Doanh nghiệp</option>
+        </select><br>
+        <input type="number" placeholder="Số kênh cao cấp" id="so__kenhcc"><br>
+        <input class='none' type="number" placeholder="Số kết nối" id="so__ketnoi"><br>
+        <button id="btn__cap">Tính tiền cáp</button>
+        <span id="tien__cap"></span>
+    </div>
+
+
+    
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
